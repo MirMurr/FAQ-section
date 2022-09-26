@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Epilogue:wght@500;700&family=Great+Vibes&family=Kumbh+Sans:wght@400;700&family=Playfair+Display:ital,wght@0,500;1,400;1,500&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400&family=Roboto:wght@100&family=Rubik:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+/*images start*/
+.woman-mobile {
+    display: none;
+}
+
+
+.box-image-container {
+    position: absolute;
+    margin-top: 14rem;
+    margin-left: 1rem;
+}
+
+.woman-desktop {
+    margin-left: -5rem;
+}
+/*images end*/
+
+/*start white container */
+div.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+    border-radius: 0.7rem;
+    background-color: #fafafa;
+    max-width: 80%;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding: 5rem 0;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -38rem;
+    /*background-size: contain; looks good but the other one is more similar to the design*/
+    background-size: cover;
+}
+/*end white container */
+
+/*accordion div start*/
+.accordion-heading {
+    margin-bottom: 1rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #1d1e35;
+}
+
+.accordion-item:not(:last-child) {
+    border-bottom: 1px solid #e7e7e9;
+}
+
+.accordion-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border: none;
+    outline: none;
+    background-color: #fafafa;
+    cursor: pointer;
+    transition: 0.1s; /*the grey line appears under the question*/
+    text-align: left;
+}
+
+.accordion-item--active .accordion-btn { /*formatting the grey line when we click on the button*/
+    color: #4a4b5e;
+    border-bottom: 1px solid #e7e7e9;
+}
+
+.accordion-icon { /*formatting the arrow*/
+    transform: rotate(0deg);
+    transition: 0.3s ease-in-out;
+}
+
+.accordion-item--active .accordion-icon { /*rotate the arrow by 180deg*/
+    transform: rotate(180deg);
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden; /*max height 0 and overflow hidden hides the content*/
+    transition: max-height 0.05s ease, opacity 0.05s;        /*how fast the answer collapses on click*/
+}
+
+.answer p {
+    padding: 1rem 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+}
+
+span.question p {
+    color: #787887;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+
+.accordion {
+    align-self: center;
+    margin-right: 5rem;
+    color: #787887;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.accordion-item--active .answer { /*formatting of answer sections, when we click on the question*/
+    transform: translate(0px);
+    max-height: 100rem;
+    color: #787887;
+    margin: 0.7rem 0;
+}
+
+.accordion-item--active span.question p { /*formatting of question texts, when we click on the question*/
+    color:  #1d1e35;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+
+span.question p:hover {
+    color: #f47c57;
+}
+
+/*footer start*/
+
+.attribution a {
+    color: #fafafa;
+}
+
+/*footer end*/
+
+@media only screen and (max-width: 1024px) { 
+    div.container {
+        flex-direction: column;
+        background-image: url(./images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: center top 10%;
+        background-size:auto;
+        overflow: visible;
+        margin-top: 12rem;
+        margin-bottom: 10rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        padding-bottom: 2rem;
+        max-width: 95%;
+    }
+
+    .woman-mobile {
+        display: block;
+        margin-top: -15rem;
+    }
+
+    .woman-desktop {
+        display: none;
+    }
+
+    .box-image-container {
+        display: none;
+    }
+
+    .accordion-heading {
+        text-align: center;
+    }
+    .accordion {
+        align-self: center;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+   
+
+}
+
+@media only screen and (max-width: 374px) {
+    div.container {
+        background-position: center top 0%;
+        width: 95%;
+    }
+
+    .woman-mobile {
+        margin-top: -14rem;
+    }
+}
+
+
+
+
+
+
