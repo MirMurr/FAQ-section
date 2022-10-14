@@ -110,7 +110,7 @@ div.container {
     font-size: 0.75rem;
 }
 
-div.question p {
+span.question {
     color: #787887;
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 400;
@@ -133,14 +133,14 @@ div.question p {
     margin: 0.7rem 0;
 }
 
-.accordion-item--active div.question p { /*formatting of question texts, when we click on the question*/
+.accordion-item--active span.question { /*formatting of question texts, when we click on the question*/
     color:  #1d1e35;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
 
-div.question p:hover {
+span.question:hover {
     color: #f47c57;
 }
 
