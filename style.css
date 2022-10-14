@@ -110,7 +110,7 @@ div.container {
     font-size: 0.75rem;
 }
 
-span.question p {
+div.question p {
     color: #787887;
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 400;
@@ -133,14 +133,14 @@ span.question p {
     margin: 0.7rem 0;
 }
 
-.accordion-item--active span.question p { /*formatting of question texts, when we click on the question*/
+.accordion-item--active div.question p { /*formatting of question texts, when we click on the question*/
     color:  #1d1e35;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
 
-span.question p:hover {
+div.question p:hover {
     color: #f47c57;
 }
 
@@ -149,7 +149,6 @@ span.question p:hover {
 .attribution a {
     color: #fafafa;
 }
-
 /*footer end*/
 
 @media only screen and (max-width: 1024px) { 
